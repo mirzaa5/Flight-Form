@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # FlightInfoApp
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.2.2.
@@ -57,3 +58,7 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+=======
+# flight-info-challenge
+Angular web application with Firebase authentication and hosting for flight information submission
+>>>>>>> c1e55b9288be0bd8e61d206b74b2bebca1a4adf7
