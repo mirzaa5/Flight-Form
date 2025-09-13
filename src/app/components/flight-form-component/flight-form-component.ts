@@ -27,6 +27,9 @@ export class FlightFormComponent {
   private authservice = inject(AuthService)
   private router = inject(Router)
 
+  //Current user observable for UI
+  currentUser$ = this.authservice.currentUser$;
+
   //Reactive Form
   form = this.fb.group({
     airline:['', Validators.required],

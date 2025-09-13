@@ -20,11 +20,15 @@ export class AuthService {
   private currentUserSubject = new BehaviorSubject<User | null>(null);
   currentUser$ = this.currentUserSubject.asObservable(); 
   
+  // Track if auth has been initialized
+  private initializedSubject = new BehaviorSubject<boolean>(false);
+  initialized$ = this.initializedSubject.asObservable();
 
   constructor(private auth: Auth, private router:Router){
     //sync behaviorSubject with auth state
     onAuthStateChanged(this.auth, (user) => {
       this.currentUserSubject.next(user);
+      this.initializedSubject.next(true);
     } )
 
   }
@@ -52,18 +56,5 @@ export class AuthService {
       return false; // Failed !
     }
   }
-
-
-  //Get current user
-  getCurrentUser(): User | null{
-    return this.currentUserSubject.value;
-  }
-
-  //Check Authentication
-  isAuthenticated(): boolean{
-    return !!this.currentUserSubject.value
-    //returns false if value is null, else true
-  }
-  
 
 }
