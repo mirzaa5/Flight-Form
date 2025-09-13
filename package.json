@@ -5,9 +5,11 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:prod": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:flightInfoApp": "node dist/flightInfoApp/server/server.mjs"
+    "serve:ssr:flightInfoApp": "node dist/flightInfoApp/server/server.mjs",
+    "deploy": "ng build --configuration production && firebase deploy"
   },
   "prettier": {
     "printWidth": 100,
