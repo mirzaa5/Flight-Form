@@ -2,7 +2,6 @@
 
 An Angular application for booking flights with Google authentication and Firebase hosting.
 
-*Clean, modern login interface with Google authentication*
 
 ## Quick Setup
 
@@ -46,18 +45,21 @@ An Angular application for booking flights with Google authentication and Fireba
 
 ### 1. Login Page
 - Google OAuth authentication
-- Gradient background design
-- Responsive layout
+<img width="2992" height="1334" alt="localhost_4200_login" src="https://github.com/user-attachments/assets/fde525c4-1935-4c5d-bbc9-0fb0472f0412" />
 
 ### 2. Flight Booking Form
 - Secure, authenticated access
 - Flight details form with validation
 - User profile display
+  <img width="2992" height="1926" alt="localhost_4200_flight-form (2)" src="https://github.com/user-attachments/assets/0fc0e64f-388c-4977-a210-3a261b14a419" />
+
 
 ### 3. Success Confirmation
 - Submission confirmation
 - Success messaging
 - Sign out option
+  <img width="2992" height="1448" alt="flight-info-challenge-72aa1 web app_flight-form" src="https://github.com/user-attachments/assets/c60e93d2-da69-46b9-b5cc-b584bc026990" />
+
 
 ## Project Structure
 
