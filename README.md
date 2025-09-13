@@ -1,6 +1,7 @@
 # SkyForm - Flight Booking App
 
 An Angular application for booking flights with Google authentication and Firebase hosting.
+**Live Demo**: [https://flight-info-challenge-72aa1.web.app](https://flight-info-challenge-72aa1.web.app)
 
 
 ## Quick Setup
