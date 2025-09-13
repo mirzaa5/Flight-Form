@@ -1,64 +1,124 @@
-<<<<<<< HEAD
-# FlightInfoApp
+# SkyForm - Flight Booking App
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.2.2.
+An Angular application for booking flights with Google authentication and Firebase hosting.
 
-## Development server
+*Clean, modern login interface with Google authentication*
 
-To start a local development server, run:
+## Quick Setup
 
-```bash
-ng serve
+### Prerequisites
+- Node.js (v18 or higher)
+- npm
+- Firebase CLI
+
+### Installation
+
+1. **Clone and install dependencies**
+   ```bash
+   git clone <repository-url>
+   cd flightInfoApp
+   npm install
+   ```
+
+2. **Install Firebase CLI**
+   ```bash
+   npm install -g firebase-tools
+   ```
+
+3. **Login to Firebase**
+   ```bash
+   firebase login
+   ```
+
+4. **Set Firebase project**
+   ```bash
+   firebase use --add
+   ```
+   Select: `flight-info-challenge-72aa1`
+
+5. **Run the app**
+   ```bash
+   npm start
+   ```
+   Open [http://localhost:4200](http://localhost:4200)
+
+## App Flow
+
+### 1. Login Page
+- Google OAuth authentication
+- Gradient background design
+- Responsive layout
+
+### 2. Flight Booking Form
+- Secure, authenticated access
+- Flight details form with validation
+- User profile display
+
+### 3. Success Confirmation
+- Submission confirmation
+- Success messaging
+- Sign out option
+
+## Project Structure
+
+```
+src/app/
+├── components/
+│   ├── login-component/        # Google auth login
+│   └── flight-form-component/  # Flight booking form
+├── core/
+│   ├── guards/
+│   │   └── auth-guard.ts      # Route protection
+│   └── services/
+│       ├── auth.service.ts    # Google Auth management
+│       └── flight-service.ts  # Flight API integration
+├── models/
+│   └── flight.model.ts        # Flight data interface
+└── environments/              # Firebase config
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Key Features
 
-## Code scaffolding
+- Google OAuth authentication
+- Route protection with guards
+- Reactive forms with validation
+- Firebase integration
+- Responsive Tailwind CSS design
+- API integration for flight submissions
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
+## Development
 
 ```bash
-ng build
+npm start              # Development server
+npm run build:prod     # Production build
+npm test              # Run tests
+npm run deploy        # Build and deploy to Firebase
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## API Integration
 
-## Running unit tests
+The app submits flight data to:
+- **Endpoint**: `https://us-central1-crm-sdk.cloudfunctions.net/flightInfoChallenge`
+- **Method**: POST
+- **Headers**: Token and candidate information
+- **Payload**: Flight details (airline, date, time, guests, comments)
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+## Technologies
+
+- Angular 20, TypeScript
+- Firebase Auth & Hosting
+- Tailwind CSS
+- Google OAuth
+- Reactive Forms
+
+## Deployment
+
+The app is configured for Firebase Hosting:
+- Build output: `dist/flightInfoApp/`
+- Project: `flight-info-challenge-72aa1`
 
 ```bash
-ng test
+npm run deploy
 ```
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
-=======
-# flight-info-challenge
-Angular web application with Firebase authentication and hosting for flight information submission
->>>>>>> c1e55b9288be0bd8e61d206b74b2bebca1a4adf7
+---
