@@ -12,7 +12,7 @@ export class FlightService {
 
   private readonly API_URL = 'https://us-central1-crm-sdk.cloudfunctions.net/flightInfoChallenge';
   private readonly token = 'WW91IG11c3QgYmUgdGhlIGN1cmlvdXMgdHlwZS4gIEJyaW5nIHRoaXMgdXAgYXQgdGhlIGludGVydmlldyBmb3IgYm9udXMgcG9pbnRzICEh';
-  private readonly candidate = 'Testing!';
+  private readonly candidate = 'Mirza Hadi';
   
   private http = inject(HttpClient)
 

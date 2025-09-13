@@ -20,15 +20,11 @@ export class AuthService {
   private currentUserSubject = new BehaviorSubject<User | null>(null);
   currentUser$ = this.currentUserSubject.asObservable(); 
   
-  // Track if auth has been initialized
-  private authInitialized = new BehaviorSubject<boolean>(false);
-  authInitialized$ = this.authInitialized.asObservable();
 
   constructor(private auth: Auth, private router:Router){
     //sync behaviorSubject with auth state
     onAuthStateChanged(this.auth, (user) => {
       this.currentUserSubject.next(user);
-      this.authInitialized.next(true);
     } )
 
   }

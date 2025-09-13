@@ -19,6 +19,7 @@ export class FlightFormComponent {
   submitting = signal(false);
   successMsg = signal<string | null>(null);
   errorMsg = signal<string | null>(null);
+  isSubmitted = signal(false);
 
   //DI
   private fb = inject(FormBuilder)
@@ -63,11 +64,8 @@ export class FlightFormComponent {
     this.flightService.submit(payload).subscribe({
       next: () => {
         this.submitting.set(false);
-        this.successMsg.set('Flight information submitted successfully');
+        this.isSubmitted.set(true); // Set success state that persists
         this.form.reset({numOfGuests: 1});
-
-        //Auto clear success message after 3 seconds!
-        setTimeout(() => this.successMsg.set(null), 3000)
       }, error: (err) => {
         this.submitting.set(false);
         this.errorMsg.set('Submission failed, Please try again.');
@@ -78,6 +76,7 @@ export class FlightFormComponent {
 
   //SIgn out
   onSignOut(){
+    this.isSubmitted.set(false); // Reset success state on logout
     this.authservice.logout()
     this.router.navigateByUrl('/login');
   }
