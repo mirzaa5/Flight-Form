@@ -4,10 +4,6 @@ An Angular application for booking flights with Google authentication and Fireba
 
 **Live Demo**: [https://flight-info-challenge-72aa1.web.app](https://flight-info-challenge-72aa1.web.app)
 
-<<<<<<< HEAD
-*Clean, modern login interface with Google authentication*
-=======
->>>>>>> 2c7f9e9d7bc3dea7373f13ab6badfd30b03ebe02
 
 ## Quick Setup
 
